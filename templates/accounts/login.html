@@ -1,5 +1,6 @@
 {%extends 'base.html'%}
 {% load socialaccount %}
+{% load account socialaccount %}
 {% providers_media_js %}
 
 {%block content%}
@@ -34,8 +35,8 @@
               </div> <!-- form-group// -->
               
               <div class="form-group">
-                  <a href="{% url 'forgotPassword' %}" class="float-right">Olvidaste tu password?</a> 
-                  <a href="{% provider_login_url "google" %}" class="float-right">google</a> 
+                  <a href="{% url 'forgotPassword' %}" class="float-right">Olvidaste tu password?</a>
+                  <a href="{% provider_login_url 'google' %}"> <i class="fab fa-google"></i> Inicia con Google</a> 
                
               </div> <!-- form-group form-check .// -->
               <div class="form-group">
